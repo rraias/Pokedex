@@ -10,7 +10,8 @@ function App() {
   let end = useRef(19);
 
   const [pokemons, setPokemons] = useState([]);
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
+  const [apiCall, setApiCall] = useState(true);
 
   useEffect(() => {
       (async () => {
@@ -18,9 +19,10 @@ function App() {
         setPokemons(data);
         setLoading(false);
       })();
-  }, [pokemons]);
+  }, [apiCall]);
 
   function handleNext(){
+    setApiCall(apiCall === true? false : true);
     window.scrollTo(0, 0);
     start.current += 18
     end.current += 18;
@@ -28,6 +30,7 @@ function App() {
   }
 
   function handlePrevious(){
+    setApiCall(apiCall === true? false : true);
     window.scrollTo(0, 0);
     start.current -= 18
     end.current -= 18;
