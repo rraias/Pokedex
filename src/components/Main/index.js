@@ -1,18 +1,18 @@
-import {Button, Container} from './style';
-import { useState } from 'react';
+import {Button, Container, Logo} from './style';
 import Figure from './Cards';
 import { useContext } from 'react';
 import { PokemonsContext } from '../App';
-import TeamSelector from '../TeamSelector';
+import pokedexLogo from '../../images/pokedexLogo.png'
 
 export default function MainSection({handlePrevious, handleNext}) {
 
-    const [selected, setSelected] = useState()
-
     const pokemons = useContext(PokemonsContext)
+    
     return (
         <>
-        <TeamSelector/>
+        <Container>
+        <Logo src={pokedexLogo} alt='logo'/>
+        </Container>
         <Container>
             {pokemons.map(pokemon => (
                 <Figure
@@ -25,7 +25,7 @@ export default function MainSection({handlePrevious, handleNext}) {
             ))}
         </Container>
         <Container>
-            <Button onClick={handlePrevious}>Previous</Button>
+            <Button onClick={handlePrevious}>Prev</Button>
             <Button onClick={handleNext}>Next</Button>
         </Container>
         </>

@@ -1,6 +1,4 @@
 import {Card, CardText, CardImage} from './style';
-import { Button } from '../style';
-import { Container } from '../style';
 
 export default function Figure({id, src, name, types}){
     return(

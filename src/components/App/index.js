@@ -22,24 +22,20 @@ function App() {
   }, [apiCall]);
 
   function handleNext(){
-    setApiCall(apiCall === true? false : true);
+    setLoading(true)
     window.scrollTo(0, 0);
     start.current += 18
     end.current += 18;
-    setLoading(true)
+    setApiCall(apiCall === true? false : true);
   }
 
   function handlePrevious(){
-    setApiCall(apiCall === true? false : true);
+    setLoading(true)
     window.scrollTo(0, 0);
     start.current -= 18
     end.current -= 18;
-    setLoading(true)
+    setApiCall(apiCall === true? false : true);
  }
-
-
-
-
 
   return (
     <PokemonsContext.Provider value={pokemons}>

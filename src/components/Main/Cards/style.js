@@ -28,19 +28,21 @@ export const Card = styled.figure`
     };
 
     @media (max-width: 944px ) {
-        width: 165px;
-        height: 165px;
+        width: 100px;
+        height: 100px;
 
             p{
             font-size: 0.7rem;
             margin: 0%;
     };
-    }
 
-    @media (max-width: 620px ) {
-        width: 125px;
-        height: 125px;
-    }
+    @media (max-width: 400px ) {
+        width: 60px;
+        height: 60px;
+            p{
+            font-size: 0.3rem;
+    }}
+    };
 `;
 
 export const CardText = styled.h3`
@@ -50,6 +52,11 @@ export const CardText = styled.h3`
 
     @media (max-width: 944px ) {
         font-size: 1rem;
+        margin: 0%;
+    }
+
+    @media (max-width: 400px  ) {
+        font-size: 0.6rem;
         margin: 0%;
     }
 `;
