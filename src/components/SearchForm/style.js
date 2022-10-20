@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Form = styled.form`
     display: flex;
@@ -26,7 +26,7 @@ export const TextInput = styled.input`
     box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 40px -7px;
 `;
 
-export const Button = styled.button`    
+export const Button = styled.button`
     font-size: 1rem;
     font-weight: bold;
     background-color: #F2F2F2;
@@ -44,4 +44,4 @@ export const Button = styled.button`
             background-color: #FF0000;
             color: #FFFFFF;
 }
-`
+`;

@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export default styled.footer`
-    display: flex; 
+    display: flex;
     justify-content: center;
     height: 5%;
     width: 100%;
@@ -12,4 +12,4 @@ export default styled.footer`
         color: #FFFFFF;
         margin: 2%;
     }
-`
+`;

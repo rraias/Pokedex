@@ -1,4 +1,7 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { usePagination, DOTS } from '../../../CustomHooks/usePagination';
 import './style.scss';
@@ -6,11 +9,11 @@ import './style.scss';
 export default function Pagination({
   onPageChange,
   totalCount,
-  siblingCount = 1,
+  siblingCount,
   currentPage,
   pageSize,
-  className}){
-
+  className
+}) {
   const paginationRange = usePagination({
     currentPage,
     totalCount,
@@ -30,7 +33,7 @@ export default function Pagination({
     onPageChange(currentPage - 1);
   };
 
-  let lastPage = paginationRange[paginationRange.length - 1];
+  const lastPage = paginationRange[paginationRange.length - 1];
   return (
     <ul
       className={classnames('pagination-container', { [className]: className })}
@@ -43,13 +46,14 @@ export default function Pagination({
       >
         <div className="arrow left" />
       </li>
-      {paginationRange.map((pageNumber, i) => {
+      {paginationRange.map((pageNumber) => {
         if (pageNumber === DOTS) {
-          return <li key={pageNumber + i}className="pagination-item dots">&#8230;</li>;
+          return <li key={pageNumber} className="pagination-item dots">&#8230;</li>;
         }
 
         return (
-          <li key={pageNumber + i}
+          <li
+            key={pageNumber}
             className={classnames('pagination-item', {
               selected: pageNumber === currentPage
             })}
@@ -59,7 +63,7 @@ export default function Pagination({
           </li>
         );
       })}
-      <li 
+      <li
         className={classnames('pagination-item', {
           disabled: currentPage === lastPage
         })}
@@ -69,4 +73,18 @@ export default function Pagination({
       </li>
     </ul>
   );
+}
+
+Pagination.propTypes = {
+  onPageChange: PropTypes.func.isRequired,
+  totalCount: PropTypes.node.isRequired,
+  siblingCount: PropTypes.number,
+  currentPage: PropTypes.node.isRequired,
+  pageSize: PropTypes.node.isRequired,
+  className: PropTypes.string.isRequired,
+};
+
+Pagination.defaultProps = {
+  siblingCount: 1,
+
 };

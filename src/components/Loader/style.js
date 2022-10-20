@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export default styled.img`
     width: 20%;
@@ -7,4 +7,4 @@ export default styled.img`
     margin: 20% auto;
     align-items: center;
     justify-content: center;
-`
+`;

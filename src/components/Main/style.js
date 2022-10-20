@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.section`
     width: 70%;
@@ -20,4 +20,4 @@ export const Logo = styled.img`
     &:hover{
         scale: 1.1;
     }
-`
+`;

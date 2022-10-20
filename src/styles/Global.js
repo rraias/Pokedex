@@ -1,10 +1,10 @@
-import { createGlobalStyle } from "styled-components";
-import { HeeboFont } from "./Fonts";
-import blueBg from '../images/vivid-blurred-colorful-wallpaper-background.jpg'
+import { createGlobalStyle } from 'styled-components';
+import { HeeboFont } from './Fonts';
+import blueBg from '../images/vivid-blurred-colorful-wallpaper-background.jpg';
 
 export default createGlobalStyle`
  ${HeeboFont}
- 
+
     html{
     scroll-behavior: smooth;
     };
@@ -22,4 +22,4 @@ export default createGlobalStyle`
         flex-direction: column;
         min-height: 100%;
     }
-`
+`;

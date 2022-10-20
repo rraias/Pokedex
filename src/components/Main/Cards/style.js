@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import pokeballBg from '../../../images/pokeballBg.png'
+import styled from 'styled-components';
+import pokeballBg from '../../../images/pokeballBg.png';
 
 export const Card = styled.figure`
     display: flex;
@@ -52,7 +52,7 @@ export const Card = styled.figure`
     }};
 `;
 
-export const CardText = styled.h3`  
+export const CardText = styled.h3`
     width: 50%;
     font-size: 1.5rem;
     color: #E6D200;
@@ -78,4 +78,4 @@ export const CardText = styled.h3`
 export const CardImage = styled.img`
     width: 50%;
     height: 50%;
-`
+`;
