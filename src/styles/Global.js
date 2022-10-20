@@ -14,6 +14,12 @@ export default createGlobalStyle`
         margin: 0px;
         padding: 0px;
         background: url(${blueBg});
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         font-family: 'Heebo', sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
     }
 `

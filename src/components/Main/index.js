@@ -1,10 +1,11 @@
-import {Button, Container, Logo} from './style';
+import {Container, Logo} from './style';
 import Figure from './Cards';
 import { useContext } from 'react';
 import { PokemonsContext } from '../App';
 import pokedexLogo from '../../images/pokedexLogo.png'
+import SearchForm from '../SearchForm';
 
-export default function MainSection({handlePrevious, handleNext}) {
+export default function MainSection({handleReset, handleSearch, nameRef}) {
 
     const pokemons = useContext(PokemonsContext)
     
@@ -12,6 +13,13 @@ export default function MainSection({handlePrevious, handleNext}) {
         <>
         <Container>
         <Logo src={pokedexLogo} alt='logo'/>
+        </Container>
+        <Container>
+            <SearchForm
+            handleSearch={handleSearch}
+            nameRef={nameRef}
+            handleReset={handleReset}
+            />
         </Container>
         <Container>
             {pokemons.map(pokemon => (
@@ -23,10 +31,6 @@ export default function MainSection({handlePrevious, handleNext}) {
                     types={pokemon.types}
                 />
             ))}
-        </Container>
-        <Container>
-            <Button onClick={handlePrevious}>Prev</Button>
-            <Button onClick={handleNext}>Next</Button>
         </Container>
         </>
     )
