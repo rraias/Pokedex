@@ -33,7 +33,11 @@ function App() {
 
   const handleSearch = useCallback(() => {
     setLoading(true);
-    setPokemons((prevState) => prevState.filter((el) => (el.name.toLowerCase().includes(nameRef.current.value.toLowerCase()) ? el : '')));
+    setPokemons((prevState) => (
+      prevState.filter((el) => (el.name.toLowerCase().includes(nameRef.current.value.toLowerCase())
+      || el.id.toString() === nameRef.current.value
+        ? el : ''))));
+    setCurrentPage(1);
     setLoading(false);
   }, [pokemons]);
 

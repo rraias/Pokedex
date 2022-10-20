@@ -6,7 +6,17 @@ import {
 export default function SearchForm({ handleReset, handleSearch, nameRef }) {
   return (
     <Form>
-      <Label htmlFor="search">Digite o nome do Pokémon:</Label>
+      <Label htmlFor="search">
+        Digite o
+        {' '}
+        <span>NOME</span>
+        {' '}
+        ou
+        {' '}
+        <span>ID</span>
+        {' '}
+        do Pokémon:
+      </Label>
       <TextInput type="text" id="search" ref={nameRef} />
       <Button type="button" onClick={handleSearch}>Procurar</Button>
       <Button type="button" onClick={handleReset}>Resetar</Button>

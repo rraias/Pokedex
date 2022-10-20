@@ -7,6 +7,10 @@ export const Form = styled.form`
     width: 100%;
     margin: 4%;
     gap: 0.5%;
+
+    span{
+      color: #ffcb05;
+    }
 `;
 
 export const Label = styled.label`
