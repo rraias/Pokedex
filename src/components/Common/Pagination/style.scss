@@ -5,7 +5,7 @@
     list-style-type: none;
     margin-top: 4%;
     margin-bottom: -20%;
-  
+
     .pagination-item {
       padding: 0 12px;
       height: 32px;
@@ -18,9 +18,9 @@
       letter-spacing: 0.01071em;
       border-radius: 16px;
       line-height: 1.43;
-      font-size: 1.4rem;
+      font-size: 1rem;
       min-width: 32px;
-  
+
       &.dots:hover {
         background-color: transparent;
         cursor: default;
@@ -29,11 +29,11 @@
         background-color: rgba(0, 0, 0, 0.04);
         cursor: pointer;
       }
-  
+
       &.selected {
         background-color: rgba(0, 0, 0, 0.08);
       }
-  
+
       .arrow {
         &::before {
           position: relative;
@@ -46,28 +46,33 @@
           border-right: 0.12em solid rgba(0, 0, 0, 0.87);
           border-top: 0.12em solid rgba(0, 0, 0, 0.87);
         }
-  
+
         &.left {
           transform: rotate(-135deg) translate(-50%);
         }
-  
+
         &.right {
           transform: rotate(45deg);
         }
       }
-  
+
       &.disabled {
         pointer-events: none;
-  
+
         .arrow::before {
           border-right: 0.12em solid rgba(0, 0, 0, 0.43);
           border-top: 0.12em solid rgba(0, 0, 0, 0.43);
         }
-  
+
         &:hover {
           background-color: transparent;
           cursor: default;
         }
       }
+    }
+
+    @media (max-width: 650px) {
+      padding: 0 8px;
+      flex-wrap: wrap;
     }
   }
