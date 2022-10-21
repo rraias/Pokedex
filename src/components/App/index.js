@@ -6,6 +6,7 @@ import Footer from '../Footer';
 import Loader from '../Loader';
 import MainSection from '../Main';
 import Pagination from '../Common/Pagination';
+import Header from '../Header';
 
 function App() {
   const nameRef = useRef();
@@ -49,6 +50,7 @@ function App() {
 
   return (
     <>
+      <Header />
       {loading ? <Loader />
         : (
           <MainSection

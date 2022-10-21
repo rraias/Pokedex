@@ -4,7 +4,8 @@ export default styled.img`
     width: 20%;
     color: grey;
     display: flex;
-    margin: 20% auto;
-    align-items: center;
+    margin: 0 auto;
+    align-items: start;
     justify-content: center;
+    min-height: 100vh;
 `;

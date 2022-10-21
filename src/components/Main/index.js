@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
-import { Container, Logo } from './style';
+import Container from '../Common/Container';
 import Figure from './Cards';
-import pokedexLogo from '../../images/pokedexLogo.png';
 import SearchForm from '../SearchForm';
 
 export default function MainSection({
@@ -9,9 +8,6 @@ export default function MainSection({
 }) {
   return (
     <>
-      <Container>
-        <Logo src={pokedexLogo} alt="logo" />
-      </Container>
       <Container>
         <SearchForm
           handleSearch={handleSearch}

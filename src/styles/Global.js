@@ -7,6 +7,7 @@ export default createGlobalStyle`
 
     html{
     scroll-behavior: smooth;
+    min-height: 100%;
     };
 
     body{
@@ -18,8 +19,6 @@ export default createGlobalStyle`
         background-repeat: no-repeat;
         background-size: cover;
         font-family: 'Heebo', sans-serif;
-        display: flex;
-        flex-direction: column;
         min-height: 100%;
     }
 `;

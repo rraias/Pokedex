@@ -8,8 +8,14 @@ export default styled.footer`
     background-color: #FF0536;
     margin-top: 30%;
 
+
     p, a{
         color: #FFFFFF;
         margin: 2%;
+    };
+
+      p, a{
+        font-size: 0.8rem;
+
     }
 `;
