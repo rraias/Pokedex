@@ -24,7 +24,7 @@ function loadPokemon(array) {
 
 export default async function fetchApi() {
   const dataArray = [];
-  for (let i = 1; i < 649; i++) {
+  for (let i = 1; i <= 386; i++) {
     const pokemons = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
     const data = await pokemons.json();
     dataArray.push(data);

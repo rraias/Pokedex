@@ -34,6 +34,7 @@ export default function Pagination({
   };
 
   const lastPage = paginationRange[paginationRange.length - 1];
+
   return (
     <ul
       className={classnames('pagination-container', { [className]: className })}
