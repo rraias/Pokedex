@@ -45,7 +45,7 @@ export default function Pagination({
         })}
         onClick={onPrevious}
       >
-        <div className="arrow left" />
+        <zdiv className="arrow left" />
       </li>
       {paginationRange.map((pageNumber) => {
         if (pageNumber === DOTS) {
